@@ -1,0 +1,9 @@
+<h1>Student Details</h1>
+<%= notice %>
+
+<p><label>Student ID: </label><%= @student.id %></p>
+<p><label>Name: </label><%= @student.fname %> <%= @student.sname %></p>
+<p><label>Course: </label><%= @student.course %></p>
+
+<%= link_to "Edit Student", edit_student_path(@student) %>
+<%= link_to "View All Students", students_path %>

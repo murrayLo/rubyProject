@@ -1,0 +1,14 @@
+<h1>Students</h1>
+
+<%= notice %>
+
+<p><%= link_to 'Enroll New Student', new_student_path%></p>
+
+<h2>Currently enrolled students</h2>
+
+<% @students.each do |student| %>
+    <p><label>Name: </label><%= student.fname %> <%= student.sname %></p>
+    <p><%= link_to "View", student_path(student) %></p>
+    <p><%= link_to "Edit", edit_student_path(student) %></p>
+    <p><%= link_to 'Delete', student, method: :delete, data: {confirm: "Are you sure you want to permanently delete this student?"} %></p>
+<% end %>
