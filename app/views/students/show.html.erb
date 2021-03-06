@@ -1,9 +1,19 @@
-<h1>Student Details</h1>
-<%= notice %>
+<p id="notice"><%= notice %></p>
 
-<p><label>Student ID: </label><%= @student.id %></p>
-<p><label>Name: </label><%= @student.fname %> <%= @student.sname %></p>
-<p><label>Course: </label><%= @student.course %></p>
+<p>
+  <strong>Fname:</strong>
+  <%= @student.fname %>
+</p>
 
-<%= link_to "Edit Student", edit_student_path(@student) %>
-<%= link_to "View All Students", students_path %>
+<p>
+  <strong>Sname:</strong>
+  <%= @student.sname %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @student.course %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
