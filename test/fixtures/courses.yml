@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subject1: MyString
+  subject2: MyString
+  subject3: MyString
+  subject4: MyString
+  department: MyString
+
+two:
+  title: MyString
+  subject1: MyString
+  subject2: MyString
+  subject3: MyString
+  subject4: MyString
+  department: MyString
