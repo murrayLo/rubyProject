@@ -11,6 +11,14 @@
   </head>
 
   <body>
+
+  <div class='container'> <!-- putting app inside div for bootstrap -->
+
+    <!-- render the navbar from partial -->
+    <%= render 'layouts/nav/nav' %>
+
+    <%= bootstrap_flash %>
     <%= yield %>
+  </div>
   </body>
 </html>
