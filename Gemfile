@@ -59,3 +59,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'jquery-rails'
 gem 'simple_form', '~> 5.1'
+gem 'bootstrap-sass-extras'
+
+#Devise gem for authentication - https://github.com/heartcombo/devise
+gem 'devise', '~> 4.7', '>= 4.7.3'
