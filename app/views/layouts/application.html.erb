@@ -6,19 +6,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
   <div class='container'> <!-- putting app inside div for bootstrap -->
 
     <!-- render the navbar from partial -->
     <%= render 'layouts/nav/nav' %>
 
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= bootstrap_flash %>
+    
     <%= yield %>
+
   </div>
   </body>
 </html>
