@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tests
   get 'home/index'
   devise_for :users
   resources :subjects
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
   # get 'show', to: 'students#show'
   # get 'new', to: 'students#new'
 
-  root to: 'students#index' #Specify the root page
+  root to: 'home#index' #Specify the root page
 end

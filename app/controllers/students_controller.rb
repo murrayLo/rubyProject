@@ -49,6 +49,7 @@ class StudentsController < ApplicationController
 
   # DELETE /students/1 or /students/1.json
   def destroy
+    @student = Student.find(params[:id])
     @student.destroy
     respond_to do |format|
       format.html { redirect_to students_url, notice: "Student was successfully destroyed." }
