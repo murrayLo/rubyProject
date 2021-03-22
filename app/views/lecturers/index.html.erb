@@ -5,9 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Fname</th>
-      <th>Sname</th>
+      <th>Lecturer</th>
       <th>Subject</th>
       <th colspan="3"></th>
     </tr>
@@ -16,13 +14,10 @@
   <tbody>
     <% @lecturers.each do |lecturer| %>
       <tr>
-        <td><%= lecturer.title %></td>
-        <td><%= lecturer.fname %></td>
-        <td><%= lecturer.sname %></td>
+        <td><%= lecturer.title %> <%= lecturer.fname %> <%= lecturer.sname %></td>
         <td><%= lecturer.subject %></td>
-        <td><%= link_to 'Show', lecturer %></td>
+        <td><%= link_to 'View', lecturer %></td>
         <td><%= link_to 'Edit', edit_lecturer_path(lecturer) %></td>
-        <td><%= link_to 'Destroy', lecturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

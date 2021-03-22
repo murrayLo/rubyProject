@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Subject Details</h1>
+
 <p>
   <strong>Title:</strong>
   <%= @subject.title %>
@@ -11,4 +13,5 @@
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+<%= link_to 'Back', subjects_path %> | 
+<%= link_to 'Delete', @subject, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -16,9 +16,8 @@
       <tr>
         <td><%= subject.title %></td>
         <td><%= subject.lecturer %></td>
-        <td><%= link_to 'Show', subject %></td>
+        <td><%= link_to 'View', subject %></td>
         <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
