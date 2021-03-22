@@ -4,11 +4,11 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :subject1 %>
-    <%= f.input :subject2 %>
-    <%= f.input :subject3 %>
-    <%= f.input :subject4 %>
+    <%= f.input :title, label: 'Course Title' %>
+    <%= f.input :subject1, label: 'Subject 1' %>
+    <%= f.input :subject2, label: 'Subject 2' %>
+    <%= f.input :subject3, label: 'Subject 3' %>
+    <%= f.input :subject4, label: 'Subject 4' %>
     <%= f.input :department %>
   </div>
 

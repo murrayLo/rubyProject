@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Lecturer Details</h1>
+
 <p>
   <strong>Title:</strong>
   <%= @lecturer.title %>
@@ -21,4 +23,5 @@
 </p>
 
 <%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
-<%= link_to 'Back', lecturers_path %>
+<%= link_to 'Back', lecturers_path %> | 
+<%= link_to 'Delete', @lecturer, method: :delete, data: { confirm: 'Are you sure?' } %>
