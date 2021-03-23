@@ -17,7 +17,7 @@
   <%= @student.course %>
 </p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %> |
-<%= link_to 'Delete', @student, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_student_path(@student), class:"btn btn-outline-primary" %>
+<%= link_to 'Back', students_path, class:"btn btn-outline-primary" %>
+<%= link_to 'Delete', @student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %>
 

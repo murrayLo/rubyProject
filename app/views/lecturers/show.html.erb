@@ -22,6 +22,6 @@
   <%= @lecturer.subject %>
 </p>
 
-<%= link_to 'Edit', edit_lecturer_path(@lecturer) %> |
-<%= link_to 'Back', lecturers_path %> | 
-<%= link_to 'Delete', @lecturer, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_lecturer_path(@lecturer), class:"btn btn-outline-primary" %>
+<%= link_to 'Back', lecturers_path, class:"btn btn-outline-primary" %>
+<%= link_to 'Delete', @lecturer, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %>
