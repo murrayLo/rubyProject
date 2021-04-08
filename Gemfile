@@ -63,3 +63,5 @@ gem 'bootstrap-sass-extras'
 
 #Devise gem for authentication - https://github.com/heartcombo/devise
 gem 'devise', '~> 4.7', '>= 4.7.3'
+
+gem 'spreadsheet'

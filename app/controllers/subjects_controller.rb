@@ -3,8 +3,14 @@ class SubjectsController < ApplicationController
 
   # GET /subjects or /subjects.json
   def index
-    @subjects = Subject.all
+    #@subjects = Subject.all
+    @subjects = Subject.search(params[:search])
   end
+
+  #define the function for the search functionality - NOT WORKING
+  # def searchSubject
+  #   @subjects = Subject.where("title LIKE ?", "%" + params[:q] + "%")
+  # end
 
   # GET /subjects/1 or /subjects/1.json
   def show

@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
-  resources :tests
+
+  root to: 'home#index' #Specify the root page
+
   get 'home/index'
   devise_for :users
+  resources :tests
   resources :subjects
   resources :courses
   resources :lecturers
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
   resources :students
-  # get 'student', to: 'students#index'
-  # get 'show', to: 'students#show'
-  # get 'new', to: 'students#new'
 
-  root to: 'home#index' #Specify the root page
+  # Routes for Search functionality - NOT WORKING
+  # get 'searchStudent', to: 'students#show'
+  # get 'searchLecturer', to: 'lecturers#show'
+  # get 'searchCourse', to: 'courses#show'
+  # get 'searchSubject', to: 'subjects#show'
+
 end
