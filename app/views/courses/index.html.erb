@@ -1,4 +1,18 @@
+<br>
 <h1>Courses</h1>
+
+<!-- SEARCH FUNCTIONALITY NOT WORKING -->
+<!--<form class="form-inline my-2 my-lg-0" action="/searchCourse">-->
+<!--<input class="form-control mr-sm-2" name="title" type="text" placeholder="Search">-->
+<!--<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>-->
+
+<!-- Working Search Functionality -->
+<%= form_tag courses_path, class:"form-inline my-2 my-lg-0", :method => 'get' do %>
+  <%= text_field_tag :search, params[:search], class:"form-control mr-sm-2" %>
+  <%= submit_tag "Search",  class:"btn btn-outline-secondary my-2 my-sm-0" %>
+<% end %>
+
+<br>
 
 <table class="table table-hover">
   <thead>

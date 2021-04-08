@@ -3,8 +3,14 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
-    @courses = Course.all
+    #@courses = Course.all
+    @courses = Course.search(params[:search])
   end
+
+  #define the function for the search functionality - NOT WORKING
+  # def search
+  #   @courses = Course.search(params[:search])
+  # end
 
   # GET /courses/1 or /courses/1.json
   def show
@@ -13,6 +19,11 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @subject_titles = []
+    @subjects = Subject.all
+    @subjects.each do |s|
+      @subject_titles.push(s[:title])
+    end
   end
 
   # GET /courses/1/edit
@@ -66,4 +77,5 @@ class CoursesController < ApplicationController
     def course_params
       params.require(:course).permit(:title, :subject1, :subject2, :subject3, :subject4, :department)
     end
+
 end

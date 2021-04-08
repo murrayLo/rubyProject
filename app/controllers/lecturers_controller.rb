@@ -3,8 +3,14 @@ class LecturersController < ApplicationController
 
   # GET /lecturers or /lecturers.json
   def index
-    @lecturers = Lecturer.all
+    #@lecturers = Lecturer.all
+    @lecturers = Lecturer.search(params[:search])
   end
+
+  #define the function for the search functionality - NOT WORKING
+  # def searchLecturer
+  #   @lecturers = Lecturer.where("title LIKE ?", "%" + params[:q] + "%")
+  # end
 
   # GET /lecturers/1 or /lecturers/1.json
   def show
@@ -13,6 +19,11 @@ class LecturersController < ApplicationController
   # GET /lecturers/new
   def new
     @lecturer = Lecturer.new
+    @subject_titles = []
+    @subjects = Subject.all
+    @subjects.each do |s|
+      @subject_titles.push(s[:title])
+    end
   end
 
   # GET /lecturers/1/edit
