@@ -1,7 +1,6 @@
 class Subject < ApplicationRecord
 
     validates :title, presence: true
-    validates :lecturer, presence: true
 
     # has_one :lecturesubject
     # has_one :lecturer, :through => :lecturesubject

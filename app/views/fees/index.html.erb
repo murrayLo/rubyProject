@@ -1,0 +1,44 @@
+
+<h1>Fees</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr class="table-secondary">
+      <th scope="row">Course</th>
+      <th scope="row">Annual Fee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fees.each do |fee| %>
+      <tr>
+        <td><%= fee.coursetitle %></td>
+        <td><%= fee.yearlyfee %></td>
+        <td><%= link_to 'Edit', edit_fee_path(fee), class:"btn btn-outline-primary" %></td>
+        <td><%= link_to 'Delete', fee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!-- Fee file upload -->
+<div class="card border-primary mb-3">
+<div class="card-header">Upload file containing course fees</div>
+<div class="card-body">
+<%= form_tag import_fees_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import Fees", class:"btn btn-outline-primary" %>
+<% end %>
+</div>
+</div>
+</br>
+<div class="card border-primary mb-3">
+<div class="card-header"><b>OR</b>, add a single fee record</div>
+<div class="card-body">
+<%= link_to 'Add Single Fee', new_fee_path, class:"btn btn-outline-primary" %>
+</div>
+</div>
+</br>
+
+<p></p>

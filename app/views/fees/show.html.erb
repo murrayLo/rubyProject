@@ -1,0 +1,14 @@
+
+<p>
+  <strong>Course Title:</strong>
+  <%= @fee.coursetitle %>
+</p>
+
+<p>
+  <strong>Yearly Fee:</strong>
+  <%= @fee.yearlyfee %>
+</p>
+
+<%= link_to 'Edit', edit_fee_path(@fee), class:"btn btn-outline-primary" %>
+<%= link_to 'Back', fees_path, class:"btn btn-outline-primary" %>
+<%= link_to 'Delete', @fee, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %>
