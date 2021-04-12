@@ -90,8 +90,7 @@ test:
 production:
   <<: *default
   database: collegeApp_production
-  database: collegeApp_development
-  username: postgres
-  password: Password1
-  host: localhost
-  port: 5433
+  # username: postgres
+  # password: Password1
+  # host: localhost
+  # port: 5433

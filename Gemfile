@@ -65,3 +65,5 @@ gem 'bootstrap-sass-extras'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 
 gem 'spreadsheet'
+
+gem 'rspec-rails', '~> 5.0', '>= 5.0.1' #Gem for rspec testing suite
