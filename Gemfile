@@ -67,3 +67,5 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'spreadsheet'
 
 gem 'rspec-rails', '~> 5.0', '>= 5.0.1' #Gem for rspec testing suite
+
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
