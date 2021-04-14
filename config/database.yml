@@ -89,9 +89,14 @@ test:
 #
 production:
   <<: *default
-  database : college-app-production
-  host     : app-20f1cd4d-20fe-45dc-84f1-f77d43e13136-do-user-9071692-0.b.db.ondigitalocean.com
-  port     : 25060
-  username : college-app-production
-  password : o9ghzbqiotkhum3n
-  sslmode  : require
+  # database : college-app-production
+  # host     : app-20f1cd4d-20fe-45dc-84f1-f77d43e13136-do-user-9071692-0.b.db.ondigitalocean.com
+  # port     : 25060
+  # username : college-app-production
+  # password : o9ghzbqiotkhum3n
+  # sslmode  : require
+  database: collegeApp_development
+  username: postgres
+  password: Password1
+  host: localhost
+  port: 5433
