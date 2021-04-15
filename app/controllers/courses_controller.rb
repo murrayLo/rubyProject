@@ -19,10 +19,10 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
-    @subject_titles = []
-    @subjects = Subject.all
-    @subjects.each do |s|
-      @subject_titles.push(s[:title])
+    @subject_titles = [] #create empty array
+    @subjects = Subject.all #call subjects model
+    @subjects.each do |s| #loop through each subject in subjects
+      @subject_titles.push(s[:title]) #push each title into the array
     end
   end
 
