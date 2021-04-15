@@ -119,6 +119,6 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   #HEROKU DEPLOYMENT: config.action_mailer.default_url_options = { host: 'URL', port: productionPort }
-  config.action_mailer.default_url_options = { host: https://college-admin-portal-g9p7e.ondigitalocean.app, port: 8080 }
+  config.action_mailer.default_url_options = { host: 'https://college-admin-portal-g9p7e.ondigitalocean.app', port: 8080 }
 
 end
